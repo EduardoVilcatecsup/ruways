@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Times New Roman';
+}
+
+body {
+    background: url(lofi.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    backdrop-filter: blur(25px);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 45px;
+}
+
+.logo img {
+    border-radius: 25%;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 99px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+    background: #0070fc;
+}
+
+input {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 952px) {
+    .navigation {
+        position: absolute;
+        top: 100px;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        background: rgba(0, 0, 0, 0.65);
+        width: 100%;
+        right: 0;
+        padding: 0px 0px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    input:checked ~ .navigation {
+        height: 100vh;
+        padding: 50px 0px;
+    }
+
+    .menu {
+        display: block;
+        width: 60px;
+    }
+
+    nav label {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+
+    .x-icon {
+        display: none;
+    }
+
+    input:checked ~ .menu .line-icon {
+        display: none;
+    }
+
+    input:checked ~ .menu .x-icon {
+        display: block;
+    }
+}
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ajusta la altura según sea necesario */
+}

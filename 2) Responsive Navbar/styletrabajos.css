@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Times New Roman';
+}
+
+body {
+    background: url(lofi.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    backdrop-filter: blur(25px);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 45px;
+}
+
+.logo img {
+    border-radius: 25%;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 99px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+    background: #0070fc;
+}
+
+input {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 952px) {
+    .navigation {
+        position: absolute;
+        top: 100px;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        background: rgba(0, 0, 0, 0.65);
+        width: 100%;
+        right: 0;
+        padding: 0px 0px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    input:checked ~ .navigation {
+        height: 100vh;
+        padding: 50px 0px;
+    }
+
+    .menu {
+        display: block;
+        width: 60px;
+    }
+
+    nav label {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+
+    .x-icon {
+        display: none;
+    }
+
+    input:checked ~ .menu .line-icon {
+        display: none;
+    }
+
+    input:checked ~ .menu .x-icon {
+        display: block;
+    }
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-container h2 {
+    font-family: 'Playfair Display', serif; /* Cambio de fuente */
+    font-size: 2em;
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+.content-container img {
+    width:25%; /* Ajuste de tamaño de imagen */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-bottom: 20px;
+}
+
+.content-container button {
+    background-color: #0070fc; /* Color del botón */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    font-family: 'Georgia';
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content-container button:hover {
+    background-color: #004eff; /* Color del botón al pasar el mouse */
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Ajuste del ancho de cada tarjeta */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.card img {
+    width: 100%; /* Ajuste de tamaño de imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #cee216; /* Color del botón */
+    color: #000000; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    font-family: 'Georgia';
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #000000; /* Color del botón al pasar el mouse */
+    color :#fff;
+}

@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Times New Roman';
+}
+
+body {
+    background: url(lofi.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    backdrop-filter: blur(25px);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 45px;
+}
+
+.logo img {
+    border-radius: 25%;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 99px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+    background: #0070fc;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 952px) {
+    .navigation {
+        position: absolute;
+        top: 100px;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        background: rgba(0, 0, 0, 0.65);
+        width: 100%;
+        right: 0;
+        padding: 0px 0px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    input:checked ~ .navigation {
+        height: 100vh;
+        padding: 50px 0px;
+    }
+
+    .menu {
+        display: block;
+        width: 60px;
+    }
+
+    nav label {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+
+    .x-icon {
+        display: none;
+    }
+
+    input:checked ~ .menu .line-icon {
+        display: none;
+    }
+
+    input:checked ~ .menu .x-icon {
+        display: block;
+    }
+}
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ajusta la altura según sea necesario */
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    width: 400px; /* Ancho del formulario */
+    padding: 30px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido */
+}
+
+form label {
+    display: block; /* Coloca cada etiqueta en una línea */
+    margin-bottom: 10px; /* Espacio inferior entre etiquetas */
+}
+
+form input,
+form textarea {
+    width: calc(100% - 20px); /* Ancho del input o textarea, restando el espacio del padding */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio inferior entre campos */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+}
+
+form button {
+    width: calc(100% - 20px); /* Ancho del botón, restando el espacio del padding */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #0070fc; /* Color de fondo */
+    color: white; /* Color de texto */
+    cursor: pointer; /* Cursor de tipo puntero al pasar por encima */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+.input-container {
+    display: flex;
+    margin-bottom: 20px; /* Ajusta el espaciado entre los campos */
+}
+
+.input-container label {
+    width: 120px; /* Ajusta el ancho del label */
+}
+
+.input-container input, .input-container textarea {
+    flex: 1; /* Hace que los campos se expandan para llenar el espacio restante */
+    padding: 10px; /* Ajusta el espaciado dentro del campo */
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    color: white;
+    margin-left: 10px; /* Añade espacio entre el label y el campo */
+}
